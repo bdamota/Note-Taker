@@ -14,5 +14,5 @@ An app to keep track of all of life's "to-dos" that was built with a custom serv
 - Heroku
 
 ## Installation:
-Clone Repository.
-Install Node, Express, Heroku, Uniqid .
+- Clone Repository.
+- Install Node, Express, Heroku, Uniqid .
