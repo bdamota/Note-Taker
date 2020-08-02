@@ -8,21 +8,19 @@ router.get("/notes", (req, res) => {
     res.json(results)
 })
 
-router.get('/notes/:id', (req, res) => {
-    const result = findById(req.params.id, notes);
-    if (result) {
-      res.json(result);
-    } else {
-      res.send(404);
-    }
-  });
-
 router.post("/notes", (req, res) => {
     //set id 
     req.body.id = uniqid()
     const note = createNewNote(req.body, notes)
     res.json(note);
 })
+
+router.delete('/notes/:id', function (req, res) {
+  store 
+  .removeNote(req.params.id)
+  .then(() => res.json({ ok: true}))
+  .catch(err => res.status(500).json(err));
+});
 
 
 module.exports = router;
