@@ -16,5 +16,17 @@ router.post("/notes", (req, res) => {
     res.json(note);
 })
 
+router.delete("/notes/:id", (req, res) => {
+    const idDeleted = req.params.id.toString();
+
+    for (let i = 0; i < notes.length; i++) {
+        if (notes[i].id === idDeleted) {
+            notes.splice(i, 1)
+        } 
+    } 
+
+    res.json(notes);
+});
+
 
 module.exports = router;
