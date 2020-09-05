@@ -4,6 +4,18 @@ html, body {
   padding: 0;
 }
 
+.title {
+  font-size: 20pt;
+}
+.title, .display-4 {
+  font-weight: bold;
+  font-family:'Courier New', Courier, monospace;
+}
+
+.mt-4 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .save-note {
   display: none;
 }
@@ -14,6 +26,17 @@ html, body {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+.card-header {
+  text-align: center;
+}
+
+.note {
+  margin-left: 8%;
+  margin-top: 11%;
+  height: 35rem;
+}
+
 
 .note-textarea, .note-title {
   color: #000000;
@@ -31,7 +54,7 @@ html, body {
 .note-title {
   height: 50px;
   margin-top: 13px;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .note-title:read-only, .note-textarea:read-only {
@@ -52,7 +75,6 @@ html, body {
 .list-container .list-group,
 .list-container .list-group-item:first-child,
 .list-container .card {
-  border-top: none;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
